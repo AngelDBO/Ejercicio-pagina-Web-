@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+   <head manifest="/manifiesto/manifiesto.cache">
+       <title>...:::WEB PRUEBA 2016:::...</title>
+       <meta name="descripcion" content="web de angel dabiel bedoya" />
+       <meta name="keywords" content="web de ange para su mundo de ideas" />
+       <link rel= stylesheet href="css/estilo.css" type="text/css"/>
+   </head>
+   <body>
+      <div id="cajaheader">
+      	
+      </div>
+      <div id="principal" itempscope itemtype="http://www.data-vocabulary.org/Person">
+	    <header>
+	       <div id="logo"></div>
+	       <h1><span itemprop="name">Angel Daniel Bedoya Ortega</span></h1>
+	       <h2><span itemprop="title">Games y Novedades</span></h2>
+	       <nav>
+	          <ul>
+	        	<li><a  href="index.html"><canvas id="iconoinicio"   width="50" height="50" ></canvas><br />Inicio</a></li>
+	        	<li><a  href="noticias.html"><canvas id="icononoticias" width="50" height="50" ></canvas><br />Noticias</a></li>
+	        	<li><a  href="sobremi"><canvas id="iconosobreMi"  width="50" height="50" ></canvas><br />sobre mi</a></li>
+	        	<li><a  href="contacto"><canvas id="iconocontacto" width="50" height="50" ></canvas><br />Contacto</a></li>
+	          </ul>
+	       </nav>
+	    </header>
+	    <div id="contenido">
+	    <form action="php/enviamail.php" method="post">
+        <table border=1>
+          <tr>
+            <td width="50%" >
+            <p style="text-aling:right;">Introduce tu nombre</p>
+            </td>
+            <td>
+              <input type="text" 100% required name="Nombre" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="text-aling:right;">Introduce tu email
+            </td>
+            <td>
+              <input type="email" width= 100% value="ejemplo: usuario@dominio.com"  name="E-mail" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <p style="text-aling:right;">Escribe tu mensaje
+            </td>
+            <td>
+              <textarea cols="40" rows="6" name="Mensaje"></textarea>
+            </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <input type="submit" value="Enviar">
+          </td>
+          </tr>
+        </table> 
+      </form>
+	 </div>
+	  <footer>
+	  	<h6>
+	  		
+	  	</h6>
+	  	<script type="text/javascript">
+	  	   if(localStorage.pagecount){localStorage.pagecount = Number(localStorage.pagecount)+1;}else{localStorage.pagecount = 1;}
+	  	      document.write("Has visitado mi pagina" + localStorage.pagecount + "veces");
+	  	</script>
+	  	<script type="text/javascript">
+          if(sessionStorage.pagecount){sessionStorage.pagecount =Number (sessionStorage.pagecount)+1;}else{sessionStorage.pagecount = 1;}
+              document.write("En esta sesion, has visitado mi pagina :" + sessionStorage.pagecount  + "veces");
+	  	</script>
+	  </footer>
+  </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+
+   var otrocolor ="blue";
+   var micolor ="green";
+   var escala = 0.5;
+   var segundocolor ="white";
+  
+  //IMAGEN DE SOBRE MI
+
+   var c=document.getElementById("iconosobreMi");
+   var cxt=c.getContext("2d");
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false);
+   cxt.closePath;
+   cxt.fill();
+  
+  //IMAGEN DE CONTACTO
+
+   var c=document.getElementById("iconocontacto");
+   var cxt=c.getContext("2d");
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(otrocolor);
+   cxt.beginPath();
+   cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(otrocolor);
+   cxt.beginPath();
+   cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+   cxt.closePath;
+   cxt.fill();
+
+   // IMAGEN DE INICIO
+
+   var c=document.getElementById("iconoinicio");
+   var cxt=c.getContext("2d");
+  
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*50,escala*40,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+  
+   cxt.fillStyle=(segundocolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*50,escala*30,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   //IMAGEN DE NOTICIAS
+
+   var c=document.getElementById("icononoticias");
+   var cxt=c.getContext("2d");
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+   cxt.closePath;
+   cxt.fill();
+
+   cxt.fillStyle=(micolor);
+   cxt.beginPath();
+   cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
+   cxt.closePath;
+   cxt.fill();
+   
+
+
+   </script>
+  
